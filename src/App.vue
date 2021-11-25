@@ -1,15 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <div id="nav">
+      <router-link to="/">Home</router-link> | 
+      <router-link to="/register">대여하기</router-link> | 
+      <router-link to="/vue3test" :data="123123">테스트</router-link> | 
+      <router-link to="/elecar">고소차</router-link> | 
+      <router-link to="/login" :getCookie="getCookie">로그인</router-link> | 
+
+    </div>
+    <router-view />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    //HelloWorld
+  },
+  methods : {
+
   }
 }
 </script>
