@@ -1,15 +1,21 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from '../components/HelloWorld'
+import Crane from '../components/HelloWorld'
 import Register from '../components/Register'
 import Vue3Test from '../components/Vue3Test'
 import Elecar from '../components/Elecar'
-import Login from '../components/Login'
+import DashBoard from '../components/Elecar'
+import Home from '../components/Home'
 
 const routes = [
     {
         path : '/',
-        name : 'home',
+        name : 'Home',
         component : Home
+    },
+    {
+        path : '/crane',
+        name : 'crane',
+        component : Crane
     },
     {
         path : '/register',
@@ -27,11 +33,10 @@ const routes = [
         component : Elecar
     },
     {
-        path : '/login',
-        name : 'login',
-        component : Login,
-        props: true,
-    }
+        path : '/main',
+        name : 'main',
+        component : DashBoard
+    },
 ]
 
 const router = createRouter({
